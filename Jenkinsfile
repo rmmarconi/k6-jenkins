@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Load test on rafaelmarconi.com.br site') {
       steps {
-        sh "k6 run script.js"
+        sh "run script.js"
       }
     }
   }
