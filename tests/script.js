@@ -7,15 +7,6 @@ export const options = {
     { duration: '1m', target: 20 },
     { duration: '1m', target: 10 },
   ],
-  thresholds: { 
-    http_req_duration: [
-      { 
-        threshold: 'avg<3000', 
-        threshold: 'p(95)<3000',
-        abortOnFail: true,
-      },
-    ],
-},
   noConnectionReuse: true,
   userAgent: 'MyK6UserAgentString/1.0',
 };
