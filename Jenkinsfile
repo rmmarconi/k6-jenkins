@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Load test on rafaelmarconi.com.br site') {
       steps {
-        sh 'docker run -v script.js:/home/k6/script.js loadimpact/k6 run script.js'
+        sh 'docker run -v ${WORKSPACE}/tests:/home/k6/ loadimpact/k6 run tests/script.js'
       }
     }
   }
