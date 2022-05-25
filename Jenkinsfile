@@ -1,13 +1,14 @@
 pipeline {
   agent {
     docker {
-      image 'grafana/k6:latest'
+      image 'docker:dind'
+      args '--privileged'
     }
   }
   stages {
     stage('Load test on rafaelmarconi.com.br site') {
       steps {
-        sh "run script.js"
+        sh 'docker run -v script.js:/home/k6/script.js loadimpact/k6 run script.js'
       }
     }
   }
