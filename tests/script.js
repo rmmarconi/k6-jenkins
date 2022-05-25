@@ -10,8 +10,8 @@ export const options = {
   thresholds: { 
     http_req_duration: [
       { 
-        threshold: 'avg<100', 
-        threshold: 'p(95)<1500',
+        threshold: 'avg<2000', 
+        threshold: 'p(95)<2000',
         abortOnFail: true,
       },
     ],
